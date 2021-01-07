@@ -1,8 +1,8 @@
 import 'phaser';
 
-class OptionScene extends Phaser.Scene {
+class OptionsScene extends Phaser.Scene {
   constructor() {
-    super('Option')
+    super('Options')
   }
 
   preload() {
@@ -14,4 +14,4 @@ class OptionScene extends Phaser.Scene {
   }
 }
 
-export default OptionScene;
+export default OptionsScene;

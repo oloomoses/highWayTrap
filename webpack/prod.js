@@ -31,9 +31,6 @@ module.exports = merge(base, {
   //     patterns: [
   //       { from: "./src/assets", to: "assets" }
   //     ],
-  //     options: {
-  //       concurrency: 100,
-  //     },
   //   }),
   // ],
   
