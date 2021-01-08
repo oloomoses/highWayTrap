@@ -1,9 +1,13 @@
 import 'phaser';
 
-class PreloaderScene extends Phaser.Scene {
+export default class PreloaderScene extends Phaser.Scene {
   constructor() {
     super('Preloader')
   }
+
+  init() {
+    this.readyCount = 0;
+  }  
 
   preload() {
   // add logo image
@@ -78,28 +82,19 @@ class PreloaderScene extends Phaser.Scene {
 
     this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
 
-    this.load.image('blueButton1', 'assets/blue_button02.png');
-    this.load.image('blueButton2', 'assets/blue_button03.png');
-    this.load.image('phaserLogo', 'src/logo.png');
-    this.load.image('box', 'assets/grey_box.png');
-    this.load.image('checkedBox', 'assets/blue_boxCheckmark.png');
-    this.load.audio('bgMusic', ['assets/bgMusic.mp3']);
-  }
-
-  create() {
-
-  }
-
-  init() {
-    this.readyCount = 0;
+    this.load.image('blueButton1', 'src/assets/blue_button02.png');
+    this.load.image('blueButton2', 'src/assets/blue_button03.png');
+    this.load.image('phaserLogo', 'src/assets/logo.png');
+    this.load.image('box', 'src/assets/grey_box.png');
+    this.load.image('checkedBox', 'src/assets/blue_boxCheckmark.png');
+    this.load.audio('bgMusic', ['src/assets/bgMusic.mp3']);
   }
    
   ready() {
+    this.scene.start('Title');   
     this.readyCount++;
     if (this.readyCount === 2) {
       this.scene.start('Title');
     }
   }
 }
-
-export default PreloaderScene;

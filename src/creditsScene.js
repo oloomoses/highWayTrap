@@ -1,6 +1,6 @@
 import 'phaser';
 
-class CreditsScene extends Phaser.Scene {
+export default class CreditsScene extends Phaser.Scene {
   constructor() {
     super('Credits')
   }
@@ -14,4 +14,3 @@ class CreditsScene extends Phaser.Scene {
   }
 }
 
-export default CreditsScene;

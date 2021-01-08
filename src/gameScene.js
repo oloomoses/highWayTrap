@@ -11,7 +11,7 @@ class GameScene extends Phaser.Scene
     }
       
     create () {
-        const logo = this.add.image(400, 150, 'logo')
+        this.add.image(400, 150, 'logo')
     }
 }
 
