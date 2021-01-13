@@ -1,31 +1,31 @@
 export default class Model {
   constructor() {
-    this._soundOn = true;
-    this._musicOn = true;
-    this._bgMusicPlaying = false;
+    this.sound = true;
+    this.music = true;
+    this.bgMusic = false;
   }
- 
+
   set musicOn(value) {
-    this._musicOn = value;
+    this.music = value;
   }
- 
+
   get musicOn() {
-    return this._musicOn;
+    return this.music;
   }
- 
+
   set soundOn(value) {
-    this._soundOn = value;
+    this.sound = value;
   }
- 
+
   get soundOn() {
-    return this._soundOn;
+    return this.sound;
   }
- 
+
   set bgMusicPlaying(value) {
-    this._bgMusicPlaying = value;
+    this.bgMusic = value;
   }
- 
+
   get bgMusicPlaying() {
-    return this._bgMusicPlaying;
+    return this.bgMusic;
   }
 }

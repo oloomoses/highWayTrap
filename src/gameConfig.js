@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 
 const config = {
   type: Phaser.AUTO,
@@ -11,8 +11,8 @@ const config = {
     arcade: {
       debug: true,
       gravity: { x: 200 },
-    }
-  }
+    },
+  },
 };
 
 export default config;

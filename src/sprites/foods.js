@@ -1,4 +1,4 @@
-import "phaser";
+import Phaser from 'phaser';
 
 export default class Foods extends Phaser.Physics.Arcade.Sprite {
   constructor(scene, x, y, spriteKey) {
