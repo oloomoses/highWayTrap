@@ -1,6 +1,6 @@
 import 'regenerator-runtime';
 
-// const fetch = require('node-fetch');
+const fetch = require('node-fetch');
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kVKYwHN0v6CUwPbrtOJ4/scores/';
 
