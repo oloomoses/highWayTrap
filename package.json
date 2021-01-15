@@ -35,12 +35,13 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "phaser": "^3.50.0",
-    "webpack-merge": "^4.2.2",
-    "webpack": "^5.4.0",
-    "html-webpack-plugin": "^4.3.0",
-    "terser-webpack-plugin": "^3.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
-    "clean-webpack-plugin": "^3.0.0"
+    "html-webpack-plugin": "^4.3.0",
+    "phaser": "^3.50.0",
+    "regenerator-runtime": "^0.13.7",
+    "terser-webpack-plugin": "^3.0.6",
+    "webpack": "^5.4.0",
+    "webpack-merge": "^4.2.2"
   }
 }

@@ -6,6 +6,9 @@ const config = {
   width: 1100,
   height: 530,
   backgroundColor: '#999999',
+  dom: {
+    createContainer: true,
+  },
   physics: {
     default: 'arcade',
     arcade: {
