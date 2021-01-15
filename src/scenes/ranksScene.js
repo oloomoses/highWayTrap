@@ -1,34 +1,45 @@
 import Phaser from 'phaser';
 import Buttons from '../buttons';
-import { getScore } from '../leaderBoard';
+import { getScores } from '../leaderBoard';
 
-let scoreText;
-
-export default class GameOverScene extends Phaser.Scene {
+export default class RanksScene extends Phaser.Scene {
   constructor() {
-    super('GameOverScene');
+    super('Rank');
   }
 
-  create() {
+  async create() {
     const xAxisCenter = this.cameras.main.worldView.x + this.cameras.main.width / 2;
-    const gameOver = this.add
-      .text(xAxisCenter, 90, 'Scores', {
+    const scores = this.add
+      .text(xAxisCenter, 40, 'Scores', {
         fontFamily: 'Tahoma',
-        fontSize: '80px',
+        fontSize: '40px',
         fill: 'white',
       })
       .setOrigin(0.5);
-    gameOver.setShadow(2, 2, 'DarkSlateGray', 5);
+    scores.setShadow(2, 2, 'DarkSlateGray', 5);
 
-    scoreText = this.add
-      .text(xAxisCenter, 280, 'Score: ', {
+    const title = this.add
+      .text(400, 60, 'Num  |  Name  |  Score', {
         fontFamily: 'Tahoma',
-        fontSize: '15px',
+        fontSize: '20px',
         fill: 'white',
-      })
-      .setOrigin(0.5);
-    scoreText.setShadow(2, 2, 'DarkSlateGray', 2);
+      });
+    title.setShadow(2, 2, 'DarkSlateGray', 2);
 
-    this.playAgainButton = new Buttons(this, xAxisCenter - 200, 430, 'blueButton1', 'blueButton2', 'Play Again', 'title');
+    this.score = await getScores().catch(err => err);
+
+    this.sortScore = this.score.sort((a, b) => (a.score > b.score ? -1 : 1));
+
+    for (let i = 0; i <= 10; i += 1) {
+      const Text = this.add
+        .text(400, 100 + (i * 40), `${i + 1}  |  ${this.sortScore[i].user}  |  ${this.sortScore[i].score} `, {
+          fontFamily: 'Tahoma',
+          fontSize: '20px',
+          fill: 'white',
+        });
+      Text.setShadow(2, 2, 'DarkSlateGray', 2);
+    }
+
+    this.playAgainButton = new Buttons(this, xAxisCenter + 300, 430, 'blueButton1', 'blueButton2', 'Play Again', 'Title');
   }
 }

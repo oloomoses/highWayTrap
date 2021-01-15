@@ -7,6 +7,7 @@ import TitleScene from './scenes/titleScene';
 import OptionsScene from './scenes/optionsScene';
 import CreditsScene from './scenes/creditsScene';
 import GameOverScene from './scenes/gameOverScene';
+import RanksScene from './scenes/ranksScene';
 import Model from './model';
 
 class Game extends Phaser.Game {
@@ -19,6 +20,7 @@ class Game extends Phaser.Game {
     this.scene.add('Credits', CreditsScene);
     this.scene.add('Game', GameScene);
     this.scene.add('gameOver', GameOverScene);
+    this.scene.add('Rank', RanksScene);
     this.scene.start('Boot');
 
     const model = new Model();
