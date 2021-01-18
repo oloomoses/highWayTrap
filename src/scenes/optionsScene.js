@@ -31,7 +31,7 @@ class OptionsScene extends Phaser.Scene {
 
     this.updateAudio();
 
-    this.menuButton = new Buttons(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
+    this.menuButton = new Buttons(this, 500, 400, 'blueButton1', 'blueButton2', 'Menu', 'Title');
   }
 
   updateAudio() {
