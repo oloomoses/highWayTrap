@@ -19,7 +19,7 @@ export default class RanksScene extends Phaser.Scene {
     scores.setShadow(2, 2, 'DarkSlateGray', 5);
 
     const title = this.add
-      .text(400, 60, 'Num  |  Name  |  Score', {
+      .text(400, 60, 'Pos  |  Name  |  Score', {
         fontFamily: 'Tahoma',
         fontSize: '20px',
         fill: 'white',
@@ -40,6 +40,6 @@ export default class RanksScene extends Phaser.Scene {
       Text.setShadow(2, 2, 'DarkSlateGray', 2);
     }
 
-    this.playAgainButton = new Buttons(this, xAxisCenter + 300, 430, 'blueButton1', 'blueButton2', 'Play Again', 'Title');
+    this.playAgainButton = new Buttons(this, xAxisCenter + 300, 430, 'blueButton1', 'blueButton2', 'Main Menu', 'Title');
   }
 }
