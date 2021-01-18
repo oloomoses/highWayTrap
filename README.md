@@ -45,6 +45,7 @@
 This is a game build in JavaScript and Phaser, where a character is trapped inside busy high way, and they have to evade the vehicles and eat some fruits in order to survive.
 
 ##### For more infor about this project check out the [GDD](https://github.com/oloomoses/highWayTrap/blob/feature/DGG.pdf)
+# [GDD](https://github.com/oloomoses/highWayTrap/blob/feature/DGG.pdf)
 
 ### Built With
 Components of this project is listed below;
