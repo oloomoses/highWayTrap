@@ -44,6 +44,8 @@
 ## About The Project
 This is a game build in JavaScript and Phaser, where a character is trapped inside busy high way, and they have to evade the vehicles and eat some fruits in order to survive.
 
+##### For more infor about this project check out the [GDD](https://github.com/oloomoses/highWayTrap/blob/feature/DGG.pdf)
+
 ### Built With
 Components of this project is listed below;
 
@@ -57,8 +59,10 @@ Components of this project is listed below;
 
 <!-- GETTING STARTED -->
 ## Getting Started
-This project has been deployed on github pages, you can visit page or download/clone
+This project has been deployed on [LIVE VERSION](https://dreamy-babbage-704138.netlify.app/), you can visit page or download/clone
 repository from github to try it.
+
+#### [LIVE VERSION](https://dreamy-babbage-704138.netlify.app/)
 
 
 <!-- USAGE EXAMPLES -->
