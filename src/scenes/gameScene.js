@@ -12,7 +12,7 @@ const dropDelay = 400;
 
 class GameScene extends Phaser.Scene {
   constructor() {
-    super();
+    super('Game');
 
     this.avoidCars = this.avoidCars.bind(this);
     this.collectFoods = this.collectFoods.bind(this);
