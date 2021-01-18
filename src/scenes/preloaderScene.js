@@ -89,6 +89,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('car_black', 'src/assets/car_black.png');
     this.load.image('car_red', 'src/assets/car_red.png');
     this.load.image('car_green', 'src/assets/car_green.png');
+    this.load.image('car_blue', 'src/assets/blue_green.png');
     this.load.image('apple', 'src/assets/apple.png');
     this.load.image('banana', 'src/assets/banana.png');
     this.load.image('carrot', 'src/assets/carrot.png');

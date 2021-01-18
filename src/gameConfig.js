@@ -3,9 +3,9 @@ import Phaser from 'phaser';
 const config = {
   type: Phaser.AUTO,
   parent: 'index',
-  width: 1100,
-  height: 530,
-  backgroundColor: '#999999',
+  width: 1030,
+  height: 520,
+  backgroundColor: '#333333',
   dom: {
     createContainer: true,
   },
@@ -13,7 +13,7 @@ const config = {
     default: 'arcade',
     arcade: {
       debug: false,
-      gravity: { x: 200 },
+      gravity: { x: 400 },
     },
   },
 };

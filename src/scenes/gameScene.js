@@ -8,7 +8,7 @@ let score = 0;
 let lives = 3;
 let scoreText;
 let livesText;
-const dropDelay = 1000;
+const dropDelay = 400;
 
 class GameScene extends Phaser.Scene {
   constructor() {
@@ -25,7 +25,7 @@ class GameScene extends Phaser.Scene {
     const map = this.make.tilemap({ key: 'map' });
     const tileset = map.addTilesetImage('road', 'tiles', 32, 32, 0, 0);
     const layer1 = map.createLayer('Tile Layer 1', tileset, 0, 0);
-    this.player = new Player(this, 80, 190, 'bike');
+    this.player = new Player(this, 950, 190, 'bike');
 
     layer1.setCollisionByProperty({ collides: true });
     this.physics.add.collider(this.player, layer1);
@@ -58,7 +58,7 @@ class GameScene extends Phaser.Scene {
   createCars(x, y) {
     const cars = ['car_black', 'car_green', 'car_red'];
     const randomIdx = Math.floor(Math.random() * 3);
-    this.carsGroup.create(x, y, cars[randomIdx]).setScale(0.5);
+    this.carsGroup.create(x, y, cars[randomIdx]).setScale(0.6);
   }
 
   createFoods(x, y) {
@@ -87,12 +87,12 @@ class GameScene extends Phaser.Scene {
   dropItems() {
     const codinates = [180, 330];
     const yAxis = codinates[Math.floor(Math.random() * codinates.length)];
-    const foodOrCars = Math.floor(Math.random() * 2);
+    const foodOrCars = Math.floor(Math.random() * 3);
 
     if (foodOrCars === 1) {
-      this.createCars(20, yAxis);
-    } else {
       this.createFoods(20, yAxis);
+    } else {
+      this.createCars(20, yAxis);
     }
   }
 
