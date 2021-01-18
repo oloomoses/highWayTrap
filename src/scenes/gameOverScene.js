@@ -7,7 +7,7 @@ let scoreText;
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
-    super('GameOverScene');
+    super('gameOver');
   }
 
   create(score) {
@@ -37,10 +37,11 @@ export default class GameOverScene extends Phaser.Scene {
           await postScore(input, scoreData)
             .catch(err => err);
           this.playAgainButton = new Buttons(this, xAxisCenter - 200, 430, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
-          this.rank = new Buttons(this, xAxisCenter + 200, 430, 'blueButton1', 'blueButton2', 'View Ranks', 'Rank');
         }
       }
     });
+
+    this.rank = new Buttons(this, xAxisCenter + 200, 430, 'blueButton1', 'blueButton2', 'View Ranks', 'Rank');
   }
 
   displayScore(xAxisCenter) {

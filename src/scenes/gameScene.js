@@ -129,7 +129,7 @@ class GameScene extends Phaser.Scene {
     livesText.setText(`Lives: ${lives}`);
 
     if (lives === 0) {
-      this.scene.start('GameOverScene', score);
+      this.scene.start('gameOver', score);
     }
   }
 }
